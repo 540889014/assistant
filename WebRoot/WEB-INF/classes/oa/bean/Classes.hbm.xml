@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="oa.bean">
+
+	<class name="Classes" table="classes">
+		<id name="id">
+            <generator class="native"/>
+		</id>
+		<property name="className"/>
+			<many-to-one name="xueyuan" column="xueyuanid"></many-to-one>
+	
+	<set name="students" inverse="true">
+	
+		<key column="classesid"></key>
+		<one-to-many class="Student"/>
+	</set>
+	</class>
+	    
+</hibernate-mapping>
+        

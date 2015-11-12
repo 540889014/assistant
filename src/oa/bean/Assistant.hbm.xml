@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="oa.bean">
+
+	<class name="Assistant" table="assistant">
+		<id name="id">
+            <generator class="native"/>
+		</id>
+		<property name="username"/>
+		<property name="password"></property>
+		<property name="AS_name"/>
+		<property name="AS_birthday"/>
+		<property name="AS_sex"/>
+		<property name="zhengZhiMianMao"/>
+		<property name="AS_state"/>
+		<property name="zhiChengDaiMa"/>
+		<property name="AS_study"/>
+		<property name="AS_from"/>
+		<property name="AS_phone"/>
+		<property name="AS_address"/>
+		<property name="AS_info"/>
+		<property name="AS_pic"/>
+			<many-to-one name="xueyuan" column="xueyuanid"></many-to-one>
+	
+	</class>
+	    
+</hibernate-mapping>
+        

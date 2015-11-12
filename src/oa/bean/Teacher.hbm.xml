@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="oa.bean">
+
+	<class name="Teacher" table="teacher">
+		<id name="id">
+            <generator class="native"/>
+		</id>
+		<property name="tea_name"/>
+		<property name="tea_birthday"/>
+		<property name="tea_sex"/>
+		<property name="zhengZhiMianMao"/>
+		<property name="tea_state"/>
+		<property name="zhiChengDaiMa"/>
+		<property name="tea_study"/>
+		<property name="tea_from"/>
+		<property name="tea_phone"/>
+		<property name="tea_address"/>
+		<property name="tea_info"/>
+		<property name="tea_pic"/>
+			<many-to-one name="xueyuan" column="xueyuanid"></many-to-one>
+	
+	</class>
+	    
+</hibernate-mapping>
+        
